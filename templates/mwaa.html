@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block heading %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h4>Render at: {{ current_time | datetimefilter }}</h4>
+  <br>
+
+ Please click <a href="{{ url }}" target="_blank">here</a> to connect the MWAA GUI for {{ environment }} in account {{ account }}.
+  <br>
+{% endblock %}
+{% block footer %}
+{{super()}}
+{% endblock %}

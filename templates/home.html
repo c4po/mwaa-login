@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block heading %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h4>Render at: {{ current_time | datetimefilter }}</h4>
+  <br>
+    <h1>Login MWAA</h1>
+    <form action="/login" method="post">
+        <p>
+            <label for="AWS Account">AWS Account: </label>
+            <input type="test" name="account" value="108592964140">
+        </p>
+        <p>
+            <label for="MWAA Environment">MWAA Environment: </label>
+            <input type="text" name="environment" value="test-mwaa">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+{% endblock %}
+{% block footer %}
+{{super()}}
+{% endblock %}
+
